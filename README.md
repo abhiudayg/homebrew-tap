@@ -35,3 +35,27 @@ brew install --HEAD abhiudayg/tap/anode
 brew update
 brew upgrade anode
 ```
+
+---
+
+## Automated Daily Release Bumper
+
+This repository runs an automated GitHub Actions workflow daily (`.github/workflows/update-formulae.yml`) that checks upstream GitHub releases for each formula in [`formulae.json`](formulae.json), parses release checksums (`checksums.txt` or calculates SHA-256 for binaries), bumps the version in `Formula/*.rb`, and commits the updates.
+
+### Adding a New Formula
+
+To register a new tool in the tap:
+1. Create `Formula/<name>.rb`.
+2. Add an entry to [`formulae.json`](formulae.json):
+   ```json
+   {
+     "name": "my-tool",
+     "repo": "abhiudayg/my-tool",
+     "formula": "Formula/my-tool.rb",
+     "description": "Description of the tool"
+   }
+   ```
+3. Test locally:
+   ```bash
+   python3 scripts/update-formulae.py
+   ```

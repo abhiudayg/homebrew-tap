@@ -1,0 +1,8 @@
+[
+  {
+    "name": "anode",
+    "repo": "abhiudayg/anode",
+    "formula": "Formula/anode.rb",
+    "description": "Proof-of-Topology Bare-Metal Orchestrator for Unmodified Go Backends"
+  }
+]
