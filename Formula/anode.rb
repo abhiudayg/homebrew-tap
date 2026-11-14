@@ -1,27 +1,27 @@
 class Anode < Formula
   desc "Proof-of-Topology Bare-Metal Orchestrator for Unmodified Go Backends"
   homepage "https://anode.abhiudayg.dev"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
   head "https://github.com/abhiudayg/anode.git", branch: "master"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/abhiudayg/anode/releases/download/v1.0.0/anode_darwin_arm64.tar.gz"
-      sha256 "9cfd7014ead7b68ae17b7e954d0e00225182b1d0b87073e6b9b9aa7e7d3eea99"
+      url "https://github.com/abhiudayg/anode/releases/download/v1.1.0/anode_darwin_arm64.tar.gz"
+      sha256 "2fdc5dfca612d276f155d2aadb68111794d8359f336ab54576023caf10d49eed"
     else
-      url "https://github.com/abhiudayg/anode/releases/download/v1.0.0/anode_darwin_amd64.tar.gz"
-      sha256 "4985da7787e421f8c0c41e87b1110c0c8fc1178c3c19acfb52384d5c9e0bda06"
+      url "https://github.com/abhiudayg/anode/releases/download/v1.1.0/anode_darwin_amd64.tar.gz"
+      sha256 "6182926222a3cfd957ea67b1e14ad05c9f88fca542241e036e2a0c460ea331ef"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/abhiudayg/anode/releases/download/v1.0.0/anode_linux_arm64.tar.gz"
-      sha256 "3a430fee866db49f1f2de68a2d7796d4ca17dcf59fa95767aaa03c47b743bec7"
+      url "https://github.com/abhiudayg/anode/releases/download/v1.1.0/anode_linux_arm64.tar.gz"
+      sha256 "2551d29bcf5fec6e77e9411b20813ac34c97f0301e0eba9cfa968d9262500f8c"
     else
-      url "https://github.com/abhiudayg/anode/releases/download/v1.0.0/anode_linux_amd64.tar.gz"
-      sha256 "951136df56bd3963779849b29ba6a9f677db0adc853ad08743f674cf1164958c"
+      url "https://github.com/abhiudayg/anode/releases/download/v1.1.0/anode_linux_amd64.tar.gz"
+      sha256 "672c555c7e74f9b2ae1d86c454a96fa36bd40b69ae6e2ea7a8a054333dcfa92a"
     end
   end
 
